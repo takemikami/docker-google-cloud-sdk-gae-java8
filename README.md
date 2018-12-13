@@ -1,12 +1,13 @@
 Google Cloud SDK Docker + openjdk8, appengine component
 ---
 
-Google Cloud SDK Docker + openjdk8, appengine component.
+Google Cloud SDK Docker + openjdk8 + gcloud appengine components.
 
-This container is used for ci server.  
-Skip install openjdk8 and appengine component, and build time is shorter.
+This container is handy for a continuous integration build environment such as CircleCI.
 
-see.
+It skips the install of openjdk8 and appengine components to get a shorter build time.
+
+See also:
 - https://hub.docker.com/r/google/cloud-sdk/
 - https://github.com/GoogleCloudPlatform/cloud-sdk-docker
 
@@ -14,21 +15,26 @@ see.
 
 ## CircleCI
 
-put this image name to ``.circleci/config.yml``.
+Point to this image name in ``.circleci/config.yml``.
 
 ```
 version: 2
 jobs:
   build:
     docker:
-      - image: takemikami/google-cloud-sdk-gae-java8:latest
+      - image: powerpro/google-cloud-sdk-gae-java8:latest
 ```
 
-## check image at local PC
+## Pull the image locally
 
-view gcloud command usage.
+Try out gcloud command usage.
 
 ```
-$ docker pull takemikami/google-cloud-sdk-gae-java8
+$ docker pull powerpro/google-cloud-sdk-gae-java8
 $ docker run -t google-cloud-sdk-gae-java8 gcloud
+```
+
+OR open a Bash shell
+```
+$ docker run -it --rm google-cloud-sdk-gae-java8 bash
 ```
