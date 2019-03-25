@@ -1,7 +1,5 @@
-Google Cloud SDK Docker + openjdk8, appengine component
+Alpine + Google Cloud SDK + openjdk8, appengine components
 ---
-
-Google Cloud SDK Docker + openjdk8 + gcloud appengine components.
 
 This container is handy for a continuous integration build environment such as CircleCI.
 
