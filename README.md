@@ -1,7 +1,8 @@
-Google Cloud SDK Docker + openjdk8, appengine component
+OpenJDK8 + Google Cloud SDK App Engine Component
 ---
 
-Google Cloud SDK Docker + openjdk8, appengine component.
+Docker image  
+OpenJDK8 + Google Cloud SDK App Engine Component
 
 This container is used for ci server.  
 Skip install openjdk8 and appengine component, and build time is shorter.
@@ -30,5 +31,5 @@ view gcloud command usage.
 
 ```
 $ docker pull takemikami/google-cloud-sdk-gae-java8
-$ docker run -t google-cloud-sdk-gae-java8 gcloud
+$ docker run -t takemikami/google-cloud-sdk-gae-java8 gcloud --version
 ```
