@@ -1,26 +1,27 @@
 # yamllint disable rule:line-length
 ---
-version: 2
+version: 2.1
 jobs:
   build:
     machine: true
     steps:
       - checkout
-
       - run:
           name: Build and Deploy the Docker Image
           command: |
-            REPO=powerpro
-            IMG=google-cloud-sdk-gae-java8
-            TAG=latest
-            docker build -t $IMG:$TAG .
             docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASS
-            docker tag $IMG:$TAG $REPO/$IMG:$TAG
-            docker push $REPO/$IMG:$TAG
+            make build
+            make push
 
 # https://circleci.com/docs/2.0/workflows/
 workflows:
   version: 2
+  build-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: gh-pages
   weekly:
     triggers:
       - schedule:
