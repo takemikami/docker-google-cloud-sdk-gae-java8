@@ -8,6 +8,7 @@ It skips the install of openjdk8 and appengine components to get a shorter build
 See also:
 - https://hub.docker.com/r/google/cloud-sdk/
 - https://github.com/GoogleCloudPlatform/cloud-sdk-docker
+- https://hub.docker.com/repository/docker/powerpro/google-cloud-sdk-gae-java8
 
 # Getting started
 
