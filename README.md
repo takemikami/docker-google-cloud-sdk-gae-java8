@@ -1,9 +1,13 @@
-Alpine + Google Cloud SDK + openjdk8, appengine components
+Alpine + Google Cloud SDK + OpenJDK8, appengine components
 ---
 
 This container is handy for a continuous integration build environment such as CircleCI.
 
-It skips the install of openjdk8 and appengine components to get a shorter build time.
+It allows skipping the install of [OpenJDK8](https://openjdk.java.net/projects/jdk8/) and appengine components for a faster build time.
+
+gcloud components:
+- app-engine-java
+- pubsub-emulator
 
 See also:
 - https://hub.docker.com/r/google/cloud-sdk/
