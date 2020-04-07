@@ -6,6 +6,7 @@ This container is handy for a continuous integration build environment such as C
 It allows skipping the install of [OpenJDK8](https://openjdk.java.net/projects/jdk8/) and appengine components for a faster build time.
 
 gcloud components:
+- beta
 - app-engine-java
 - pubsub-emulator
 

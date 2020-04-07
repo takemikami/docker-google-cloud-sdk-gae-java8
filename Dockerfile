@@ -6,5 +6,6 @@ FROM google/cloud-sdk:alpine
 RUN apk --no-cache add openjdk8
 RUN gcloud components update \
     && gcloud components install \
+        beta \
         app-engine-java \
         pubsub-emulator
