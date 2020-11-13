@@ -5,6 +5,8 @@ This container is handy for a continuous integration build environment such as C
 
 It allows skipping the install of [OpenJDK8](https://openjdk.java.net/projects/jdk8/) and appengine components for a faster build time.
 
+It also includes Node.js and NPM for convience if you use JavaScript in your builds.
+
 gcloud components:
 - beta
 - app-engine-java
